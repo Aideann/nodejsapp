@@ -1,6 +1,6 @@
 const express = require('express');
 
-var app = express();
+const app = express();
 
 app.get('/', (req, res) => {
   res.status(404).send({
@@ -11,18 +11,16 @@ app.get('/', (req, res) => {
 
 app.get('/users', (req, res) => {
   res.send([{
-    name: 'Mike',
+    name: 'Adrian',
+    age: 21
+  }, {
+    name: 'Matt',
     age: 27
   }, {
-    name: 'Andrew',
-    age: 25
-  }, {
-    name: 'Jen',
-    age: 26
+    name: 'Michal',
+    age: 27
   }]);
 });
-// GET /users
-// Give users a name prop and age prop
 
 app.listen(3000);
 module.exports.app = app;

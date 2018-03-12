@@ -21,7 +21,7 @@ describe('Utils', () => {
   });
 
   it('should square a number', () => {
-    var res = utils.square(3);
+    const res = utils.square(3);
 
     expect(res).toBe(9).toBeA('number');
   });
@@ -34,29 +34,12 @@ describe('Utils', () => {
   });
 });
 
-
-
-// should verify first and last names are set
-// assert it includes firstName and lastName with proper values
 it('should set firstName and lastName', () => {
-  var user = {location: 'Philadelphia', age: 25};
-  var res = utils.setName(user, 'Andrew Mead');
+  const user = {location: 'Rzeszów', age: 25};
+  const res = utils.setName(user, 'Adrian Łysakowski');
 
   expect(res).toInclude({
-    firstName: 'Andrew',
-    lastName: 'Mead'
+    firstName: 'Adrian',
+    lastName: 'Łysakowski'
   });
 });
-
-// it('should expect some values', () => {
-//   // expect(12).toNotBe(12);
-//   // expect({name: 'andrew'}).toNotEqual({name: 'Andrew'});
-//   // expect([2,3,4]).toExclude(1);
-//   expect({
-//     name: 'Andrew',
-//     age: 25,
-//     location: 'Philadelphia'
-//   }).toExclude({
-//     age: 23
-//   })
-// });
